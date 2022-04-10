@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
     session_start();
     $_SESSION['loggedin']=true;
     $_SESSION['username']=$username;
-    // header("location: index.php");
+    header("location: index.php");
     }  
   else
   {
@@ -38,8 +38,8 @@ if($_SERVER['REQUEST_METHOD']=="POST")
     <title>Hello, world!</title>
   </head>
   <body>
-     
-    <form action="index.php" method="POST" >
+     <h1 align="center"> Login Page </h1>
+    <form action="login.php" method="POST" >
   <div class="mb-3">
     <label for="username" class="form-label">Username</label>
     <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
